@@ -91,8 +91,12 @@ $(document).ready(function() {
       $(this).append("<img src='img/image" + allPlayers[playerTurn].symbol + ".png' alt='" + allPlayers[playerTurn].symbol + " picture' height=200px>");
       allPlayers[playerTurn].owns.push(squareId);
       if (winCondition(playerTurn) === true) {
-        alert(allPlayers[playerTurn].name + ' wins!');
-        playerTurn = resetGame()
+        //setTimeout to create delay before showing win alert.
+        setTimeout(function(){
+          alert(allPlayers[playerTurn].name + ' wins!');
+          playerTurn = resetGame();
+        },  500);
+
       } else {
         playerTurn = switchTurn();
       }
