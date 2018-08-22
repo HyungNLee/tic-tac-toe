@@ -1,0 +1,11 @@
+.board-container {
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+}
+
+.game-square {
+  border: 1px solid black;
+  width:250px;
+  height: 250px; /* Fix height to equal width */
+}
