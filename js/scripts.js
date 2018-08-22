@@ -101,5 +101,9 @@ $(document).ready(function() {
     }
   })
 
+  //reset game button
+  $("#resetGameButton").click(function() {
+    playerTurn = resetGame();
+  })
 
 })
